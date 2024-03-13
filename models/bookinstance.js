@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 
 var BookInstanceSchema = new Schema(
   {
+    //Book object compiled as model and exported as a 'Book', so we can reference it as such here
     book: { type: Schema.Types.ObjectId, ref: 'Book', required: true }, //reference to the associated book
     imprint: {type: String, required: true},
     status: {type: String, required: true, enum: ['Available', 'Maintenance', 'Loaned', 'Reserved'], default: 'Maintenance'},
