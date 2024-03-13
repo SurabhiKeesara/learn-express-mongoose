@@ -6,7 +6,7 @@ var BookSchema = new Schema(
   {
     title: {type: String, required: true, maxLength: 100},
     author: { type: Schema.Types.ObjectId, ref: 'Author', required: true }, //reference to the associated book
-    summary: {type: String, required: true, maxLength: 100},
+    summary: {type: String, required: true},
     isbn: {type: String, required: true, maxLength: 100},
     genre: [{ type: Schema.Types.ObjectId, ref: 'Genre'}]
   }
