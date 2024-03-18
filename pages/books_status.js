@@ -14,5 +14,5 @@ exports.show_all_books_status = function(res) {
       return bi.book.title + " : " + bi.status
     }))
   })
-  .catch(err => console.log(err.message))
+  .catch(err => res.send('Status not found'))
 }
