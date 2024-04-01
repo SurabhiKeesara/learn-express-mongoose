@@ -7,7 +7,8 @@ function getAuthor(family_name, first_name) {
 }
 
 function getGenre(name) {
-  return Genre.find({name: name});
+  const to_find = `${name}` // not the best way
+  return Genre.find({name: to_find});
 }
 
 exports.new_book = async (res, family_name, first_name, genre_name, title) => {
